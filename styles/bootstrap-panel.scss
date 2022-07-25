@@ -1,0 +1,19 @@
+// deprecated Bootstrap 3.x Panels to Cards
+// https://getbootstrap.com/docs/4.0/migration/#panels
+
+.panel {
+  @extend .card;
+  @extend  .mb-3;
+}
+
+.panel-heading {
+  @extend .card-header;
+}
+
+.panel-body {
+  @extend .card-body;
+}
+
+.panel-footer {
+  @extend .card-footer;
+}
