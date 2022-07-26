@@ -1,0 +1,173 @@
+// https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
+// https://github.com/ProfessionalWiki/chameleon/blob/master/resources/styles/themes/_light.scss
+
+// Grid
+
+$cmln-collapse-point: 1105px !default;
+$cmln-grid-breakpoints: (
+		xs: 0,
+		sm: 576px,
+		md: 768px,
+		lg: 992px,
+		cmln: $cmln-collapse-point,
+		xl: 1200px,
+		xxl: 1400px,
+) !default;
+
+
+// Color system
+$white:    #fff !default;
+$gray-100: lighten(black, 98%) !default;		// #fafafa
+$gray-200: lighten(black, 96%) !default;		// #f5f5f5
+$gray-300: lighten(black, 90%) !default;		// #e6e6e6
+$gray-400: lighten(black, 85%) !default;		// #d9d9d9
+$gray-500: lighten(black, 75%) !default;		// #bfbfbf
+$gray-600: lighten(black, 50%) !default;		// #808080
+$gray-700: lighten(black, 32%) !default;		// #525252
+$gray-800: lighten(black, 24%) !default;		// #3d3d3d
+$gray-900: lighten(black, 18%) !default;		// #2e2e2e
+$black:    #000 !default;
+
+$grays: () !default;
+$grays: map-merge((
+		"100": $gray-100,
+		"200": $gray-200,
+		"300": $gray-300,
+		"400": $gray-400,
+		"500": $gray-500,
+		"600": $gray-600,
+		"700": $gray-700,
+		"800": $gray-800,
+		"900": $gray-900
+), $grays);
+
+@for $i from 1 through 9 {
+  $val: $i * 100;
+  .bg-gray-#{$val} {
+	background-color: gray($val);
+  }
+}
+
+$blue:     #007bff !default;
+$indigo:   #6610f2 !default;
+$purple:   #6f42c1 !default;
+$pink:     #e83e8c !default;
+$red:      #dc3545 !default;
+$orange:   #fd7e14 !default;
+$yellow:   #ffc107 !default;
+$green:    #28a745 !default;
+$teal:     #20c997 !default;
+$cyan:     #17a2b8 !default;
+
+$chambray: #355b84;
+$cobalt:   #1b599b;
+$burgundy: #9b1b2f;
+
+$colors: () !default;
+$colors: map-merge((
+		"blue":       $blue,
+		"indigo":     $indigo,
+		"purple":     $purple,
+		"pink":       $pink,
+		"red":        $red,
+		"orange":     $orange,
+		"yellow":     $yellow,
+		"green":      $green,
+		"teal":       $teal,
+		"cyan":       $cyan,
+		"white":      $white,
+		"gray":       $gray-600,
+		"gray-dark":  $gray-800
+), $colors);
+
+$primary:   $blue !default;
+$secondary: $gray-600 !default;
+$success:   $green !default;
+$info:      $cyan !default;
+$warning:   $yellow !default;
+$danger:    $red !default;
+$error:     $danger !default;
+$light:     $gray-200 !default;  // better contrast than $gray-100
+$darker:    $gray-400 !default;
+$dark:      $gray-800 !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge((
+		"primary":    $primary,
+		"secondary":  $secondary,
+		"success":    $success,
+		"info":       $info,
+		"warning":    $warning,
+		"danger":     $danger,
+		"error":      $error,
+		"light":      $light,
+		"darker":     $darker,
+		"dark":       $dark
+), $theme-colors);
+// stylelint-enable
+
+
+// Options
+// https://getbootstrap.com/docs/5.0/customize/options/
+
+$enable-caret:                true !default;
+$enable-rounded:              true !default;
+$enable-shadows:              true !default;	// default: false
+$enable-gradients:            false !default;
+$enable-transitions:          true !default;
+$enable-reduced-motion:       true !default;
+$enable-smooth-scroll:        true !default;
+$enable-grid-classes:         true !default;
+$enable-container-classes:    true !default;
+$enable-cssgrid:              false !default;
+$enable-button-pointers:      true !default;
+$enable-rfs:                  true !default;
+$enable-validation-icons:     true !default;
+$enable-negative-margins:     false !default;
+$enable-deprecation-messages: true !default;
+$enable-important-utilities:  true !default;
+
+
+// Body
+$body-bg:    $white !default;
+$body-color: $gray-800 !default;
+
+
+// Cards
+$card-spacer-y: .5rem !default;
+$card-spacer-x: 1rem !default;
+$card-bg:       $gray-100 !default;
+$card-cap-bg:   $gray-400 !default;
+
+// Links
+$link-color: $cobalt;
+$cmln-link-formats: (
+		new: ('color': $burgundy, 'hover-color': darken($burgundy, 0.15)),
+);
+
+
+// Typography
+$font-size-base: 0.9375rem !default; // 15px
+$font-size-lg:   $font-size-base * 1.25 !default;
+$font-size-sm:   $font-size-base * .9 !default;
+$h1-font-size:   $font-size-base * 2.2 !default;
+$h2-font-size:   $font-size-base * 1.7 !default;
+$h3-font-size:   $font-size-base * 1.4 !default;
+$h4-font-size:   $font-size-base * 1.2 !default;
+$h5-font-size:   $font-size-base * 1.1 !default;
+$h6-font-size:   $font-size-base * 1.0 !default;
+$headings-color: $gray-800 !default;
+
+
+// Navbar
+$navbar-light-color:                $gray-700 !default; // cmln: improved contrast
+$navbar-light-hover-color:          darken($navbar-light-color, 0.15) !default;
+$navbar-light-active-color:         darken($navbar-light-color, 0.3) !default;
+$navbar-light-disabled-color:       fade_out($navbar-light-color, 0.3) !default;
+$navbar-light-toggler-border-color: fade_out($navbar-light-color, 0.5) !default;
+
+// PersonalTools
+$cmln-personal-tools-link-new: ('color': $gray-600, 'hover-color': darken($gray-600, 0.15)) !default;
+
+// PageTools
+$cmln-page-tools-link-new: ('color': $gray-600, 'hover-color': darken($gray-600, 0.15)) !default;
