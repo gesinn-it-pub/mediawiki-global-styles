@@ -2,3 +2,58 @@
 .mw-body {
   padding: 0;
 }
+
+// Tables
+table.wikitable {
+
+  background-color: #FFF;
+  border: none;
+
+  * > tr > td,
+  * > tr > th {
+	padding: 0.3em 0.6em;
+	border-top: none;
+	border-bottom: 1px solid $gray-300;
+	border-left: none;
+	border-right: none;
+
+  }
+
+  * > tr > th {
+	background-color: $gray-300;
+	text-align: left;
+	padding-right: 1em;
+	border-bottom: 1px solid $gray-300;
+
+	a {
+	  color: #000;
+	}
+  }
+
+  tr:nth-child(2n),
+  tr:nth-child(2n+1) {
+	background: none;
+  }
+
+  tr:hover {
+	background: $gray-300;
+  }
+}
+
+.table-small {
+  font-size: 0.85em;
+}
+
+.table-smaller {
+  font-size: 0.75em;
+}
+
+.table-smallest {
+  font-size: 0.70em;
+}
+
+// Tables within a gadget / panel
+.panel table.wikitable {
+  background: none;
+  margin: 0;
+}

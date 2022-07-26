@@ -1,1 +1,71 @@
 // Filtered
+
+.panel {
+  .filtered {
+	.filtered-filters {
+	  margin: 8px 0 0 0;
+	  border: none;
+	  overflow: visible;
+
+	  .filtered-value {
+
+		margin: 16px 0 16px 0;
+
+		.filtered-filter-label {
+		  background: $card-bg;
+		}
+
+		.filtered-filter-collapse::before {
+		  background: $card-bg;
+		}
+
+		.filtered-filter-collapse.collapsed:before {
+		  content: "\25BC";
+		}
+
+		.filtered-filter-collapse.uncollapsed:before {
+		  content: "\25B2";
+		}
+
+		.filtered-value-switches {
+		  padding: 0 0 4px 0;
+		  margin: 0 0 8px 0;
+		}
+
+		.filtered-value-option {
+
+		  padding: 0 10px 0 0;
+		  word-wrap: break-word;
+		  width: 50% !important;
+
+		  @include media-breakpoint-down(sm) {
+			width: 100% !important;
+		  }
+
+		  // increase margin between checkbox and label
+		  .filtered-value-value {
+			margin: 4px 4px 0px 0px !important;
+		  }
+
+		  .filtered-value-option-label {
+			font-weight: normal;
+		  }
+		}
+	  }
+	}
+
+	.filtered-views {
+	  margin: 0;
+	  border: none;
+
+	  .filtered-views-container {
+		padding: 1px; // Fix IE
+		overflow-x: auto;
+	  }
+
+	  .filtered-table table.wikitable {
+		width: 100%;
+	  }
+	}
+  }
+}
