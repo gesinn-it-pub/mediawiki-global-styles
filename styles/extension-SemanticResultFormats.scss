@@ -1,5 +1,11 @@
 // Filtered
 
+// SRF Filtered sets heights of 40% and 60% which causes display issues for FF 9x
+.filtered .filtered-filters, .filtered .filtered-views {
+  height: unset !important;
+  overflow: unset !important;
+}
+
 .panel, .card {
   .filtered {
 	.filtered-filters {
@@ -60,7 +66,6 @@
 
 	  .filtered-views-container {
 		padding: 1px; // Fix IE
-		overflow-x: auto;
 	  }
 
 	  .filtered-table table.wikitable {
