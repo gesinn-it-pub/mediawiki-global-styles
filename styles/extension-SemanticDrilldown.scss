@@ -1,0 +1,36 @@
+// --- Filter ---
+
+.drilldown-filter {
+  margin-bottom: 16px;
+
+  input[type="submit"] {
+	@extend .btn;
+	@extend .btn-primary;
+	position: relative;
+	left: -12px;
+	top: 1px;
+  }
+
+  // Don't wrap search button
+  .ui-widget {
+	display: inline-block;
+  }
+
+  // Input field
+  .ui-widget input.ui-widget-content {
+	width: 200px;
+	padding: 6px 8px;
+  }
+
+  // Dropdown caret
+  button.ui-button {
+	width: 16px !important;
+	padding: 6px 8px !important;
+	height: 28px !important;
+	background: none !important;
+	border: none !important;
+	position: relative;
+	left: -19px;
+	top: -2px;
+  }
+}
