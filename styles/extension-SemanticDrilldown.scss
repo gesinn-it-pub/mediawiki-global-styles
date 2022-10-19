@@ -1,4 +1,39 @@
-// --- Filter ---
+// Categories-Wrapper --------------------------------------------------------------------------------------------------
+
+div#drilldown-categories-wrapper {
+  display: none;
+}
+
+// Results -------------------------------------------------------------------------------------------------------------
+
+div.drilldown-results {
+  @extend .card;
+//  background-color: $gray-200;
+}
+
+div#drilldown-header {
+  @extend .card-header;
+}
+
+// inject a non-breaking space in the header to get correct height
+div#drilldown-header:after {
+  content: '\00a0';
+}
+
+div#drilldown-filters, div#drilldown-top-paging, div.drilldown-results-output, div#drilldown-footer, div.drilldown-results > div > p {
+  @extend .card-body;
+}
+
+// Filters -------------------------------------------------------------------------------------------------------------
+div#drilldown-filters {
+  background-color: $gray-200;
+}
+
+div#drilldown-applicable-filters {
+  border-bottom: unset !important;
+}
+
+// Filter --------------------------------------------------------------------------------------------------------------
 
 .drilldown-filter {
   margin-bottom: 16px;
@@ -33,4 +68,42 @@
 	left: -19px;
 	top: -2px;
   }
+}
+
+// show dropdown filters side-by-side
+.drilldown-filter:not(.is-normal-filter) {
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  vertical-align: top;
+}
+
+// Drilldown Top Paging ------------------------------------------------------------------------------------------------
+div#drilldown-top-paging {
+  border-top: 1px solid $card-cap-bg;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+// Results Output ------------------------------------------------------------------------------------------------------
+div.drilldown-results-output {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+// Drilldown Footer / Paging -------------------------------------------------------------------------------------------
+div#drilldown-footer {
+  padding-top: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+div.drilldown-results div.mw-paging {
+  padding-right: $card-spacer-x;
+}
+
+// reset padding for top mw-paging
+div#drilldown-top-paging div.mw-paging {
+  padding-right: 0;
 }

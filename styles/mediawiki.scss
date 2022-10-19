@@ -1,9 +1,9 @@
-// Body
+// Body ----------------------------------------------------------------------------------------------------------------
 .mw-body {
   padding: 0;
 }
 
-// Tables
+// Tables --------------------------------------------------------------------------------------------------------------
 table.wikitable {
 
   background-color: #FFF;
@@ -53,7 +53,7 @@ table.wikitable {
 }
 
 // Tables within a gadget / panel
-.panel table.wikitable {
+.panel table.wikitable, div.drilldown-result-body table.wikitable {
   background: none;
   margin: 0;
 }

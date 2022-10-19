@@ -1,8 +1,7 @@
 // https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
 // https://github.com/ProfessionalWiki/chameleon/blob/master/resources/styles/themes/_light.scss
 
-// Grid
-
+// Grid ----------------------------------------------------------------------------------------------------------------
 $cmln-collapse-point: 1105px !default;
 $cmln-grid-breakpoints: (
 		xs: 0,
@@ -15,7 +14,7 @@ $cmln-grid-breakpoints: (
 ) !default;
 
 
-// Color system
+// Color system --------------------------------------------------------------------------------------------------------
 $white:    #fff !default;
 $gray-100: lighten(black, 98%) !default;		// #fafafa
 $gray-200: lighten(black, 96%) !default;		// #f5f5f5
@@ -48,12 +47,12 @@ $grays: map-merge((
   }
 }
 
-$blue:     #007bff !default;
+$blue:     #39718b !default;
 $indigo:   #6610f2 !default;
 $purple:   #6f42c1 !default;
 $pink:     #e83e8c !default;
 $red:      #dc3545 !default;
-$orange:   #fd7e14 !default;
+$orange:   #ffb300 !default;
 $yellow:   #ffc107 !default;
 $green:    #28a745 !default;
 $teal:     #20c997 !default;
@@ -107,7 +106,7 @@ $theme-colors: map-merge((
 // stylelint-enable
 
 
-// Options
+// Options -------------------------------------------------------------------------------------------------------------
 // https://getbootstrap.com/docs/5.0/customize/options/
 
 $enable-caret:                true !default;
@@ -128,28 +127,29 @@ $enable-deprecation-messages: true !default;
 $enable-important-utilities:  true !default;
 
 
-// Body
+// Body ----------------------------------------------------------------------------------------------------------------
 $body-bg:    $white !default;
 $body-color: $gray-800 !default;
 
 
-// Cards
+// Cards ---------------------------------------------------------------------------------------------------------------
 $card-spacer-y: .5rem !default;
 $card-spacer-x: 1rem !default;
 $card-bg:       $gray-100 !default;
 $card-cap-bg:   $gray-400 !default;
 
-// Links
+
+// Links ---------------------------------------------------------------------------------------------------------------
 $link-color: $cobalt;
 $cmln-link-formats: (
 		new: ('color': $burgundy, 'hover-color': darken($burgundy, 0.15)),
 );
 
 
-// Typography
-$font-size-base: 0.9063rem !default; // 14.5px
+// Typography ----------------------------------------------------------------------------------------------------------
+$font-size-base: 0.9167rem !default; // 11pt / 14.6667px
 $font-size-lg:   $font-size-base * 1.25 !default;
-$font-size-sm:   $font-size-base * .9 !default;
+$font-size-sm:   $font-size-base * .95 !default;
 $h1-font-size:   $font-size-base * 2.2 !default;
 $h2-font-size:   $font-size-base * 1.7 !default;
 $h3-font-size:   $font-size-base * 1.4 !default;
@@ -158,6 +158,10 @@ $h5-font-size:   $font-size-base * 1.1 !default;
 $h6-font-size:   $font-size-base * 1.0 !default;
 $headings-color: $gray-800 !default;
 
+
+// Tables --------------------------------------------------------------------------------------------------------------
+
+// Buttons & Forms -----------------------------------------------------------------------------------------------------
 
 // Navbar
 $navbar-light-color:                $gray-700 !default; // cmln: improved contrast
