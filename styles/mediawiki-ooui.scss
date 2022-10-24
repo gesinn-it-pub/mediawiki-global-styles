@@ -1,0 +1,71 @@
+// These styles are temporary. It's better to create a custom OOUI theme.
+// See https://www.mediawiki.org/wiki/OOUI/Themes
+
+// Buttons -------------------------------------------------------------------------------------------------------------
+// Note: extends needs to match as good as possible since !important can not be applied
+// The rule is not applied, if the selector is not good enough
+
+// treat all "unflagged" buttons as primary
+div#semantic-core-content, form.oo-ui-layout.oo-ui-formLayout {
+  & .oo-ui-widget.oo-ui-widget-enabled.oo-ui-buttonElement.oo-ui-buttonElement-framed.oo-ui-buttonInputWidget.oo-ui-inputWidget > .oo-ui-buttonElement-button,
+  & .oo-ui-widget.oo-ui-widget-enabled.oo-ui-buttonElement.oo-ui-buttonElement-framed.oo-ui-buttonWidget > .oo-ui-buttonElement-button {
+	@extend .btn;
+	@extend .btn-primary;
+	display: block;
+  }
+
+
+  // progressive (e.g. Spezial:Einstellungen#mw-prefsection-watchlist)
+  & .oo-ui-widget.oo-ui-widget-enabled.oo-ui-inputWidget.oo-ui-buttonElement.oo-ui-buttonElement-framed.oo-ui-iconElement.oo-ui-labelElement.oo-ui-flaggedElement-progressive.oo-ui-buttonInputWidget > .oo-ui-buttonElement-button,
+  & .oo-ui-widget.oo-ui-widget-enabled.oo-ui-buttonElement.oo-ui-buttonElement-framed.oo-ui-buttonWidget.oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button {
+	@extend .btn;
+	@extend .btn-primary;
+	display: block;
+  }
+
+  // destructive (e.g. Spezial:Einstellungen#mw-prefsection-watchlist)
+  .oo-ui-buttonElement.oo-ui-buttonElement-frameless.oo-ui-buttonWidget.oo-ui-flaggedElement-destructive.oo-ui-labelElement.oo-ui-widget.oo-ui-widget-enabled > .oo-ui-buttonElement-button,
+  .oo-ui-widget.oo-ui-widget-enabled.oo-ui-buttonElement.oo-ui-buttonElement-framed.oo-ui-buttonWidget.oo-ui-flaggedElement-destructive > .oo-ui-buttonElement-button {
+	@extend .btn;
+	@extend .btn-danger;
+	display: block;
+  }
+
+  // invert button icons, indicators
+  .oo-ui-buttonElement-button > .oo-ui-iconElement-icon, .oo-ui-buttonElement-button > .oo-ui-indicatorElement-indicator {
+	filter: invert(1) !important;
+  }
+
+  // disabled
+  .oo-ui-buttonElement-framed.oo-ui-widget-disabled > .oo-ui-buttonElement-button {
+	opacity: 50%;
+  }
+}
+
+
+// a > .oo-ui-iconElement-icon, button > .oo-ui-iconElement-icon, div > .oo-ui-iconElement-icon
+.oo-ui-iconElement-icon {
+  position: absolute;
+  top: 0;
+  left: 5px !important;
+  margin-left: 5px !important;
+  background-size: 1rem;
+//  display: inline-block;
+  background-position: center center;
+}
+
+// add some space on the left for the icon, add the same space on the right for centered labels
+span.oo-ui-iconElement.oo-ui-iconElement-icon.oo-ui-icon-tray ~ span.oo-ui-labelElement-label, span.oo-ui-iconElement-icon ~ span.oo-ui-labelElement-label {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+span.oo-ui-iconElement-noIcon ~ span.oo-ui-labelElement-label {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+//.oo-ui-iconElement-noIcon {
+//  display: none !important;
+//}
+
