@@ -44,6 +44,8 @@ div#semantic-core-content, form.oo-ui-layout.oo-ui-formLayout {
 
 
 // a > .oo-ui-iconElement-icon, button > .oo-ui-iconElement-icon, div > .oo-ui-iconElement-icon
+// enabling the following rule will break PF layout: checkboxes at bottom of form
+/*
 .oo-ui-iconElement-icon {
   position: absolute;
   top: 0;
@@ -53,6 +55,7 @@ div#semantic-core-content, form.oo-ui-layout.oo-ui-formLayout {
 //  display: inline-block;
   background-position: center center;
 }
+*/
 
 // add some space on the left for the icon, add the same space on the right for centered labels
 span.oo-ui-iconElement.oo-ui-iconElement-icon.oo-ui-icon-tray ~ span.oo-ui-labelElement-label, span.oo-ui-iconElement-icon ~ span.oo-ui-labelElement-label {

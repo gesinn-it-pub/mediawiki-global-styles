@@ -1,1 +1,50 @@
 // Forms
+
+form#pfForm {
+  .pfTokens,
+  .pfComboBox,
+  //.pfComboBox .select2-choice
+  {
+	min-width: 450px !important;
+	/* set width to 60% to avoid overflow of long text */
+	width: 60% !important;
+  }
+
+  .sfFieldRow {
+	margin: 8px 0;
+  }
+
+  .sfFieldLabel {
+	padding-right: 0;
+	font-weight: bold;
+	text-align: right;
+
+	.simple-tooltip-inline {
+	  border-bottom: 1px solid #C8C8C8;
+	  padding-bottom: 1px;
+	}
+  }
+
+  .sfFieldLabel::after {
+	content: "*";
+	margin-left: 3px;
+	font-size: 1.5em;
+	line-height: 1em;
+	font-weight: bold;
+	opacity: 0;
+  }
+
+  .mandatoryInput {
+	.sfFieldLabel::after {
+	  color: $red;
+	  opacity: 1;
+	}
+  }
+
+  .recommendedInput {
+	.sfFieldLabel::after {
+	  color: $orange;
+	  opacity: 1;
+	}
+  }
+}

@@ -1,0 +1,68 @@
+.fancytree {
+  *:focus {
+	outline: 0;
+  }
+
+  p {
+	display: none;
+  }
+
+  ul.fancytree-container {
+	background: none;
+	border: none;
+	padding: 0;
+
+	.fancytree-icon {
+	  display: none;
+	}
+
+	.fancytree-expander {
+	  position: relative;
+	  top: 2px;
+	}
+
+	.fancytree-title {
+	  padding: 0;
+	  background: none !important;
+	}
+  }
+
+  .fancytree-treefocus span.fancytree-active span.fancytree-title {
+	color: inherit;
+	background: none;
+  }
+}
+
+ul.suckerfish {
+  padding: 0;
+  list-style: none;
+
+  ul {
+	padding: 0;
+	list-style: none;
+  }
+}
+
+
+.suckerfish li ul {
+  border: none !important;
+}
+
+.suckerfish li {
+  width: 183px !important;
+  float: none !important;
+}
+
+.suckerfish li.odd {
+  background: $card-bg !important;
+  border: 2px solid $card-bg !important;
+}
+
+.suckerfish li.even {
+  background: $card-bg !important;
+  border: 2px solid $card-bg !important;
+}
+
+.suckerfish li:hover, .suckerfish li.sfhover {
+  border: 2px solid $primary !important;
+}
