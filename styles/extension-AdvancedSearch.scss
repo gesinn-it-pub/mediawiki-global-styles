@@ -1,0 +1,14 @@
+.mw-advancedSearch-expandablePane-button {
+  > .oo-ui-buttonElement-button {
+	color: $body-color !important;
+	background-color: $card-bg !important;
+	border-color: $card-border-color !important;
+
+	> .oo-ui-indicatorElement-indicator,
+	> .oo-ui-iconElement-icon {
+	  &:not( .oo-ui-image-invert ) {
+		filter: none !important;
+	  }
+	}
+  }
+}
