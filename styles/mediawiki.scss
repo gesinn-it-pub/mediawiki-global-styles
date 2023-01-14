@@ -3,6 +3,37 @@
   padding: 0;
 }
 
+// Feedback boxes
+div.successbox {
+  @extend .alert;
+  @extend .alert-success;
+}
+
+div.messagebox {
+  @extend .alert;
+  @extend .alert-info;
+}
+
+div.errorbox {
+  @extend .alert;
+  @extend .alert-danger;
+}
+
+div.warningbox {
+  @extend .alert;
+  @extend .alert-warning;
+}
+
+// Fieldsets -----------------------------------------------------------------------------------------------------------
+// see comments on https://github.com/ProfessionalWiki/Bootstrap/blob/608be3f55a87f3f1b6d37b7c2d0b5cb841191562/resources/bootstrap/scss/_reboot.scss#L399
+.skin-chameleon fieldset {
+  legend {
+	padding: 0 !important;
+	font-weight: bold;
+	font-size: $h4-font-size;
+  }
+}
+
 // Tables --------------------------------------------------------------------------------------------------------------
 table.wikitable {
 
