@@ -58,7 +58,8 @@
 	word-wrap: break-word;
 
 	// never disable inline-block, otherwise this will lead to Issue:2492
-	display: inline-block;
+	// -> this is not true
+	//display: inline-block;
   }
 }
 
