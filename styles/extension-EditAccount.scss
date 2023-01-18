@@ -1,0 +1,21 @@
+.mw-special-EditAccount {
+  .edit-account-card {
+	@extend .card;
+	@extend .bg-white;
+  }
+
+  .edit-account-card-header {
+	@extend .card-header;
+	@extend .bg-white;
+	font-size: 1.1rem;
+  }
+
+  .edit-account-card-body {
+	@extend .card-body;
+  }
+
+  input[type="submit"] {
+	@extend .btn;
+	@extend .btn-primary;
+  }
+}
