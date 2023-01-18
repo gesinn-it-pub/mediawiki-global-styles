@@ -154,6 +154,10 @@ $card-spacer-x: 1rem !default;
 $card-bg:       $gray-100 !default;
 $card-cap-bg:   $gray-400 !default;
 
+.card-header {
+  padding-right: .5rem !important;
+}
+
 
 // Links ---------------------------------------------------------------------------------------------------------------
 $link-color: $cobalt;
@@ -178,6 +182,9 @@ $headings-color: $gray-800 !default;
 // Tables --------------------------------------------------------------------------------------------------------------
 
 // Buttons & Forms -----------------------------------------------------------------------------------------------------
+.btn {
+  box-shadow: none !important;
+}
 
 // Navbar
 $navbar-light-color:                $gray-700 !default; // cmln: improved contrast
