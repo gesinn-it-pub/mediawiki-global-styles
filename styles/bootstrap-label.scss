@@ -1,0 +1,41 @@
+// deprecated Bootstrap 3.x Labels to Badges
+// https://getbootstrap.com/docs/4.0/migration/#labels-and-badges
+
+.label {
+  @extend .badge;
+  @extend .text-white;
+  padding-top: .25em;
+  padding-bottom: .25em;
+  padding-left: .4em;
+  padding-right: .4em;
+  vertical-align: middle;
+  margin-top: -4px;
+
+  a {
+	@extend .text-white;
+  }
+}
+
+.label-default {
+  @extend .bg-gray-700;
+}
+
+.label-primary {
+  @extend .badge-primary;
+}
+
+.label-success {
+  @extend .badge-success;
+}
+
+.label-info {
+  @extend .badge-info;
+}
+
+.label-warning {
+  @extend .badge-warning;
+}
+
+.label-danger {
+  @extend .badge-danger;
+}
