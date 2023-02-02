@@ -3,7 +3,7 @@
 
 .card {
   @extend .mb-3;
-//  @extend .rounded-sm;
+  //  @extend .rounded-sm;
 }
 
 .card-header {
@@ -26,7 +26,7 @@
 	font-size: 0.8rem;
 	min-height: 26px;
 	min-width: 26px;
-	padding: 2px;
+	padding: 2px 6px;
   }
 
   .btn {
@@ -46,6 +46,39 @@
 	// margin: -2px -7px 0 11px !important;
 	// padding: 2px 5px !important;
 	font-size: 0.8rem;
+  }
+
+  .dropdown {
+	font-weight: normal;
+
+	.scrollable-menu {
+	  height: auto;
+	  max-height: 320px;
+	  overflow-x: hidden;
+	}
+
+	.dropdown-header {
+	  font-weight: bold;
+	  text-align: center;
+	  padding: .4rem 0;
+	  margin-bottom: .2rem;
+	  color: $gray-800;
+	  background-color: $gray-200;
+	}
+
+	.divider {
+	  padding-bottom: .8rem;
+	}
+
+	.dropdown-menu {
+	  min-width: 30rem;
+
+	  li > a {
+		display: block;
+		padding: 0 .8rem;
+		margin-bottom: .2rem;
+	  }
+	}
   }
 }
 

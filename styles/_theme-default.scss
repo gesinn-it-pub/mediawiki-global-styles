@@ -115,6 +115,9 @@ $theme-colors: map-merge((
 ), $theme-colors);
 // stylelint-enable
 
+$state-todo-text:     #432874;	//purple-700
+$state-todo-bg:       #E2D9F3;	//purple-100
+$state-todo-border:   #C5B3E6;	//purple-200
 
 // Options -------------------------------------------------------------------------------------------------------------
 // https://getbootstrap.com/docs/5.0/customize/options/
