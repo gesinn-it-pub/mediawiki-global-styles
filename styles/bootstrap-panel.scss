@@ -111,3 +111,30 @@
 	@extend .card-footer;
   }
 }
+
+.panel-info {
+  @extend .border-info;
+
+  > .panel-heading {
+	@extend .bg-info;
+	@extend .text-white;
+  }
+}
+
+.panel-warning {
+  @extend .border-warning;
+
+  > .panel-heading {
+	@extend .bg-warning;
+	@extend .text-white;
+  }
+}
+
+.panel-danger {
+  @extend .border-danger;
+
+  > .panel-heading {
+	@extend .bg-danger;
+	@extend .text-white;
+  }
+}
