@@ -1,16 +1,25 @@
 // Forms
 
 form#pfForm {
+  // Tokens
   .pfTokens,
-  span.comboboxSpan div.oo-ui-comboBoxInputWidget-field,
-  span.comboboxSpan div.oo-ui-selectWidget,
-  span.inputSpan input {
+  // Combobox
+  span.comboboxSpan div.oo-ui-widget,
+  // Text
+  span.inputSpan input.createboxInput {
 	min-width: 450px !important;
 	/* set max-width to avoid overflow of long text */
 	max-width: 450px !important;
 	@include media-breakpoint-down(sm) {
-	  min-width: 300px !important;
-	  max-width: 300px !important;
+	  min-width: 330px !important;
+	  max-width: 330px !important;
+	}
+  }
+  // Textarea with VE
+  span.ve-area-wrapper {
+	@include media-breakpoint-down(sm) {
+	  min-width: 330px !important;
+	  max-width: 330px !important;
 	}
   }
 
@@ -24,6 +33,13 @@ form#pfForm {
 	  font-family: inherit;
 	  font-size: inherit;
 	  height: 2.28571429em;
+	  min-width: 450px !important;
+	  /* set max-width to avoid overflow of long text */
+	  max-width: 450px !important;
+	  @include media-breakpoint-down(sm) {
+		min-width: 330px !important;
+		max-width: 330px !important;
+	  }
 	}
 
 	&:after {
