@@ -32,7 +32,7 @@ form#pfForm {
 	  background-image: none;
 	  font-family: inherit;
 	  font-size: inherit;
-	  height: 2.28571429em;
+	  min-height: 2.28571429em;
 	  min-width: 450px !important;
 	  /* set max-width to avoid overflow of long text */
 	  max-width: 450px !important;
@@ -48,6 +48,7 @@ form#pfForm {
 	  background-position: center;
 	  background-repeat: no-repeat;
 	  min-width: 39px;
+	  border: none;
 	}
   }
 
