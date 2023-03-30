@@ -4,6 +4,15 @@ div.ve-ui-toolbar > div.oo-ui-toolbar-bar {
   z-index: 1;
 }
 
+div.ve-ui-toolbar {
+  div.oo-ui-toolbar-popups {
+	a.oo-ui-tool-link {
+	  // never disable inline-block, otherwise this will lead to Issue:2492
+	  display: inline-block;
+	}
+  }
+}
+
 // Body ----------------------------------------------------------------------------------------------------------------
 .mw-body {
   padding: 0;
