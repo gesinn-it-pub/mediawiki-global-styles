@@ -5,6 +5,7 @@ form#pfForm {
   .pfTokens,
   // Combobox
   span.comboboxSpan div.oo-ui-widget,
+  span.comboboxSpan div.oo-ui-comboBoxInputWidget-field,
   // Text
   span.inputSpan input.createboxInput {
 	min-width: 450px !important;
