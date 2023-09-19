@@ -1,5 +1,16 @@
 // Forms
 
+body.action-formedit {
+  // Avoid overlapping of focused elements, e.g. a Gallery
+  // Increase z-index for global VE overlays
+  div.ve-ui-overlay {
+	z-index: unset;
+  }
+  div.ve-ui-overlay-global {
+	z-index: 4;
+  }
+}
+
 form#pfForm {
   // Tokens
   .pfTokens,
