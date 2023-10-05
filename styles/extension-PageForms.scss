@@ -17,18 +17,13 @@ form#pfForm {
   // Combobox
   span.comboboxSpan div.oo-ui-widget,
   span.comboboxSpan div.oo-ui-comboBoxInputWidget-field,
+  // Dropdown
+  span.inputSpan select.createboxInput,
   // Text
   span.inputSpan input.createboxInput {
-	min-width: 450px !important;
+	min-width: 450px;
 	/* set max-width to avoid overflow of long text */
-	max-width: 450px !important;
-	@include media-breakpoint-down(sm) {
-	  min-width: 330px !important;
-	  max-width: 330px !important;
-	}
-  }
-  // Textarea with VE
-  span.ve-area-wrapper {
+	max-width: 450px;
 	@include media-breakpoint-down(sm) {
 	  min-width: 330px !important;
 	  max-width: 330px !important;
