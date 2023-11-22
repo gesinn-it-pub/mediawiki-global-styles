@@ -15,9 +15,8 @@ div#drilldown-header {
   @extend .card-header;
 }
 
-// inject a non-breaking space in the header to get correct height
-div#drilldown-header:after {
-  content: '\00a0';
+div#drilldown-header {
+  min-height: calc(#{$font-size-lg} * 2);
 }
 
 div#drilldown-filters, div#drilldown-top-paging, div.drilldown-results-output, div#drilldown-footer, div.drilldown-results > div > p {
