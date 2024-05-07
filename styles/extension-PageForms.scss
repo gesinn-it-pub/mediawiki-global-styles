@@ -39,6 +39,7 @@ form#pfForm {
 	  min-width: 330px !important;
 	  max-width: 330px !important;
 	}
+	overflow: auto;
   }
 	
   // SemanticFormsSelect
@@ -73,6 +74,7 @@ form#pfForm {
 		min-width: 330px !important;
 		max-width: 330px !important;
 	  }
+	  overflow: auto;
 	}
 	&:after {
 	  background-color: #39718b;
