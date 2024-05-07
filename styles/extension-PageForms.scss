@@ -30,6 +30,17 @@ form#pfForm {
 	}
   }
 
+  span.inputSpan select.createboxInput-900,
+  // Text
+  span.inputSpan input.createboxInput-900 {
+	min-width: 900px;
+	max-width: 900px;
+	@include media-breakpoint-down(sm) {
+	  min-width: 330px !important;
+	  max-width: 330px !important;
+	}
+  }
+	
   // SemanticFormsSelect
   span.inputSpan.select-sfs {
 	margin-bottom: unset;
@@ -49,6 +60,20 @@ form#pfForm {
 	  }
 	}
 
+	select.createboxInput-900 {
+	  // mimic oo-ui
+	  background-image: none;
+	  font-family: inherit;
+	  font-size: inherit;
+	  min-height: 11rem;
+	  min-width: 900px !important;
+	  /* set max-width to avoid overflow of long text */
+	  max-width: 900px !important;
+	  @include media-breakpoint-down(sm) {
+		min-width: 330px !important;
+		max-width: 330px !important;
+	  }
+	}
 	&:after {
 	  background-color: #39718b;
 	  background-image: linear-gradient(transparent,transparent),url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22 fill=%22white%22 viewBox=%220 0 12 12%22%3E %3Ctitle%3E down %3C/title%3E %3Cpath d=%22M9.9 2.9 6 6.8 2.1 2.9 1 4l5 5 5-5z%22/%3E %3C/svg%3E");
