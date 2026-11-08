@@ -1,0 +1,15 @@
+{
+	"customSyntax": "postcss-scss",
+	"reportDescriptionlessDisables": true,
+	"reportNeedlessDisables": true,
+	"rules": {
+		"declaration-no-important": [ true, { "severity": "warning" } ],
+		"color-no-hex": [ true, { "severity": "warning" } ]
+	},
+	"overrides": [
+		{
+			"files": [ "**/_theme*.scss", "**/_variables.scss" ],
+			"rules": { "color-no-hex": null }
+		}
+	]
+}

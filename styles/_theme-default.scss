@@ -113,7 +113,6 @@ $theme-colors: map-merge((
 		"darker":     $darker,
 		"dark":       $dark
 ), $theme-colors);
-// stylelint-enable
 
 $state-todo-text:     #432874;	//purple-700
 $state-todo-bg:       #E2D9F3;	//purple-100

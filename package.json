@@ -1,0 +1,12 @@
+{
+  "name": "mediawiki-global-styles",
+  "private": true,
+  "description": "Global styles for MediaWiki",
+  "scripts": {
+    "stylelint": "stylelint --max-warnings 45 'styles/**/*.scss'"
+  },
+  "devDependencies": {
+    "postcss-scss": "^4.0.9",
+    "stylelint": "^18.0.0"
+  }
+}
