@@ -1,0 +1,15 @@
+// Hide namespace checkboxes for search
+form[name="searchbox"] br:first-of-type {
+  display: none;
+}
+
+form[name="searchbox"] {
+  div.mw-inputbox-element.mw-ui-checkbox {
+	display: none !important;
+  }
+
+  input.mw-ui-button {
+	@extend .btn;
+	@extend .btn-primary;
+  }
+}
