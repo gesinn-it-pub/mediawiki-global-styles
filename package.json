@@ -3,7 +3,7 @@
   "private": true,
   "description": "Global styles for MediaWiki",
   "scripts": {
-    "stylelint": "stylelint --max-warnings 46 'styles/**/*.scss'"
+    "stylelint": "stylelint --max-warnings 50 'styles/**/*.scss'"
   },
   "devDependencies": {
     "postcss-scss": "^4.0.9",

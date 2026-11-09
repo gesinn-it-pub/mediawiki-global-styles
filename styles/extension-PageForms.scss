@@ -132,3 +132,14 @@ form#pfForm {
 	border-color: $card-border-color;
   }
 }
+
+// Form Tweaks ---------------------------------------------------------------------------------------------------------
+.sc-field-100 input, .sc-field-100 select {
+  max-width: 100px !important;
+  min-width: 100px !important;
+}
+
+.sc-field-75 input, .sc-field-75 select {
+  max-width: 75px !important;
+  min-width: 75px !important;
+}
