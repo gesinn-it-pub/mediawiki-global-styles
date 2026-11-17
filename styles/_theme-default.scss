@@ -158,6 +158,12 @@ $border-radius-xl:   1rem !default;
 $border-radius-2xl:  2rem !default;
 $border-radius-pill: 50rem !default;
 
+// The corner of every free button (theme buttons and the OOUI and InputBox buttons that extend .btn). One value in
+// px, so that it does not follow the root font size (.19rem was 3.04px) and matches the buttons of the skin.
+// Button groups and joined buttons keep their own corners.
+$btn-border-radius:    3px !default;
+$btn-border-radius-sm: 3px !default;
+
 // Cards ---------------------------------------------------------------------------------------------------------------
 $card-spacer-y: .5rem !default;
 $card-spacer-x: 1rem !default;
