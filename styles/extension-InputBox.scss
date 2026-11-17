@@ -8,7 +8,9 @@ form[name="searchbox"] {
 	display: none !important;
   }
 
-  input.mw-ui-button {
+  // MW 1.39 renders the buttons as input.mw-ui-button, MW 1.43 as button.cdx-button
+  input.mw-ui-button,
+  .cdx-button {
 	@extend .btn;
 	@extend .btn-primary;
   }
