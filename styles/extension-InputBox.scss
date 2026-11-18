@@ -4,7 +4,9 @@ form[name="searchbox"] br:first-of-type {
 }
 
 form[name="searchbox"] {
-  div.mw-inputbox-element.mw-ui-checkbox {
+  // MW 1.39 renders the checkboxes as div.mw-ui-checkbox, MW 1.43 (InputBox 0.3.0) as span.cdx-checkbox
+  div.mw-inputbox-element.mw-ui-checkbox,
+  .cdx-checkbox {
 	display: none !important;
   }
 
