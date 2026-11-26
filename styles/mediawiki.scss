@@ -119,24 +119,3 @@ table.wikitable {
 :where(.panel-body, .mw-parser-output td) > :is(ul, ol, dl):where(:last-child) {
   margin-bottom: 0.5rem;
 }
-
-// Ordered lists like unordered lists (MediaWiki 1.43 only) -----------------------------------------------------------
-// In both lines the rule `.mw-parser-output ol` (0,1,1) sets margin 0.3em 0 0 3.2em and padding 0 on ordered lists, while
-// unordered lists follow the Bootstrap system (no margin above, 1rem below, padding 3.5ex). That leaves `ul` and `ol`
-// with different indents and gaps. The `:where()` trick does not work here, as the core rule exists in 1.39 as well.
-// Instead the selector uses a difference in the DOM: in 1.43 `mw-content-ltr` sits on `.mw-parser-output` itself, in 1.39
-// on a parent element, so these rules do not match in 1.39 and leave that line unchanged. The rules follow the `ul` rules
-// above: the last list of a padded container gets 0.5rem (`mb-2`), nested ordered lists none.
-// Remove when the core rule is gone or when 1.39 is no longer supported.
-.mw-parser-output.mw-content-ltr ol {
-  margin: 0 0 1rem;
-  padding-left: 3.5ex;
-}
-
-.mw-parser-output.mw-content-ltr :where(.panel-body, td) > ol:last-child {
-  margin-bottom: 0.5rem;
-}
-
-.mw-parser-output.mw-content-ltr :is(ul, ol) ol {
-  margin-bottom: 0;
-}
