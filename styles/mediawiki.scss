@@ -103,3 +103,40 @@ table.wikitable {
   background: none;
   margin: 0;
 }
+
+// Lists as last child of a padded container ---------------------------------------------------------------------------
+// Bootstrap gives every ol/ul/dl `margin-bottom: 1rem`; MediaWiki 1.43 no longer loads the core module
+// `i18n-all-lists-margins` with Chameleon (deprecated in 1.43, see T369475). A list that ends a panel body or a table
+// cell therefore adds its 16px to the 16px padding of the container (33px instead of 18.5px below the list in 1.39).
+// The container owns the space below, so the last list gets only a small margin.
+// `:where()` keeps the specificity at 0,0,1 (`:last-child` is wrapped too, as a pseudo-class would add 0,1,0): the rule
+// beats the Bootstrap element rules by position, class rules of widgets (0,1,0 and up) win over it, and in 1.39 the
+// core rule `.mw-content-ltr ul` (0,1,1) wins, so the rule has no effect there. td.mw-version-ext-descrip is not matched
+// on purpose.
+// The value comes from the spacing system: 0.5rem is Bootstrap's `mb-2`. The core margin of a list item (0.1em) collapses
+// with the list margin (the larger one wins), so the list margin alone decides the space below the last item.
+// Remove when Chameleon or MediaWiki core sets the list spacing itself again.
+:where(.panel-body, .mw-parser-output td) > :is(ul, ol, dl):where(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+// Ordered lists like unordered lists (MediaWiki 1.43 only) -----------------------------------------------------------
+// In both lines the rule `.mw-parser-output ol` (0,1,1) sets margin 0.3em 0 0 3.2em and padding 0 on ordered lists, while
+// unordered lists follow the Bootstrap system (no margin above, 1rem below, padding 3.5ex). That leaves `ul` and `ol`
+// with different indents and gaps. The `:where()` trick does not work here, as the core rule exists in 1.39 as well.
+// Instead the selector uses a difference in the DOM: in 1.43 `mw-content-ltr` sits on `.mw-parser-output` itself, in 1.39
+// on a parent element, so these rules do not match in 1.39 and leave that line unchanged. The rules follow the `ul` rules
+// above: the last list of a padded container gets 0.5rem (`mb-2`), nested ordered lists none.
+// Remove when the core rule is gone or when 1.39 is no longer supported.
+.mw-parser-output.mw-content-ltr ol {
+  margin: 0 0 1rem;
+  padding-left: 3.5ex;
+}
+
+.mw-parser-output.mw-content-ltr :where(.panel-body, td) > ol:last-child {
+  margin-bottom: 0.5rem;
+}
+
+.mw-parser-output.mw-content-ltr :is(ul, ol) ol {
+  margin-bottom: 0;
+}
